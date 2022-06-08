@@ -1,65 +1,37 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+import BlogPost from "./lib/blogPost.svelte";
+import Libs from "./lib/libs.svelte";
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
-
-  <Counter />
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
-</main>
+<Libs/>
+<div class="app">
+    <div class="leftToolBar"></div>
+    <div class="Post">
+        <BlogPost textContent='aaaa'/>
+        <BlogPost textContent='aaaa'/>
+        <BlogPost textContent='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam est, pellentesque ut mollis eu, aliquam a est. Fusce rutrum commodo ante sed mattis. Aenean ultrices, nulla vitae sagittis tincidunt, est urna pellentesque tellus, pulvinar scelerisque lacus ipsum eget nibh. Nullam congue, eros vel dapibus vestibulum, leo odio tincidunt dolor, vel blandit sapien ligula id lacus. Nam in tellus bibendum lorem ullamcorper dictum. Praesent vitae porttitor dolor, nec bibendum ex. Integer tristique, neque in elementum ullamcorper, neque mi mattis nisl, vel placerat dolor lorem imperdiet dolor. Fusce ipsum velit, imperdiet sed lacus at, blandit luctus orci. Curabitur rutrum mattis magna fermentum mattis. Proin placerat, elit vel viverra facilisis, augue urna tempus diam, id sagittis massa quam sed justo. Praesent ut facilisis augue. Cras mattis metus at velit mattis, vel condimentum urna vulputate. '/>
+        <BlogPost textContent='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam est, pellentesque ut mollis eu, aliquam a est. Fusce rutrum commodo ante sed mattis. Aenean ultrices, nulla vitae sagittis tincidunt, est urna pellentesque tellus, pulvinar scelerisque lacus ipsum eget nibh. Nullam congue, eros vel dapibus vestibulum, leo odio tincidunt dolor, vel blandit sapien ligula id lacus. Nam in tellus bibendum lorem ullamcorper dictum. Praesent vitae porttitor dolor, nec bibendum ex. Integer tristique, neque in elementum ullamcorper, neque mi mattis nisl, vel placerat dolor lorem imperdiet dolor. Fusce ipsum velit, imperdiet sed lacus at, blandit luctus orci. Curabitur rutrum mattis magna fermentum mattis. Proin placerat, elit vel viverra facilisis, augue urna tempus diam, id sagittis massa quam sed justo. Praesent ut facilisis augue. Cras mattis metus at velit mattis, vel condimentum urna vulputate. '/>
+        <BlogPost author='我是捷克' textContent='我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞我喜歡愛蜜莉亞喜歡愛蜜莉亞喜歡愛蜜莉亞'/>
+        <BlogPost author='pekora' textContent='Hello world'/>
+    </div>
+</div>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+div.Post {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1em;
+    width: 50%;
+    height: 100%;
+    background-color: darkgray;
+}
 
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
+div.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
-  }
 </style>
