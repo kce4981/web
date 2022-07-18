@@ -1,0 +1,8 @@
+# python related
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# test database
+tmp/
