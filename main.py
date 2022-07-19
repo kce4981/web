@@ -1,5 +1,4 @@
-import flask_app
+from flask_app import FlaskApp
 
-app = flask_app.create_app()
-
-app.run(debug=True)
+app = FlaskApp()
+app.run()

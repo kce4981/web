@@ -1,0 +1,6 @@
+{
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///tmp/app.db",
+    "debug_": true,
+    "host_": "0.0.0.0",
+    "port_" : 8080
+}
